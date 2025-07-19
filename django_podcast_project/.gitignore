@@ -1,0 +1,17 @@
+# Môi trường ảo
+venv/
+
+# File biến môi trường
+.env
+
+# Thư mục cache của Python
+__pycache__/
+
+# File output và các tài sản lớn
+output/
+*.png
+*.mp4
+*.wav
+
+# Cache của VSCode
+.vscode/
