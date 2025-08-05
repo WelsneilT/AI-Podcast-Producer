@@ -1,0 +1,67 @@
+# creator/characters.py (PHIÊN BẢN CẬP NHẬT ĐẦY ĐỦ NHÂN VẬT)
+
+CARTOON_CHARACTERS = [
+    {
+        "name": "Mickey Mouse",
+        "bio": "The iconic, cheerful, and kind-hearted leader of the gang.",
+        "physical_description": "An anthropomorphic mouse with black fur, a cream-colored face, large round black ears, wearing red shorts and yellow shoes.",
+        "visual_dna": "A detailed drawing of an anthropomorphic mouse with black fur, a cream-colored face, large round black ears, wearing red shorts with two white buttons, and yellow shoes",
+        "identity_tag": "the iconic Disney character Mickey Mouse",
+        "style_tag": "in the classic Disney animation style",
+        "image_url": "mickey_mouse.jpg",
+    },
+    {
+        "name": "Homer Simpson",
+        "bio": "The bumbling, donut-loving, and surprisingly relatable patriarch of The Simpsons.",
+        "physical_description": "A middle-aged, overweight man with yellow skin, a bald head with two hairs, a simple white collared shirt and blue pants.",
+        "visual_dna": "A detailed drawing of a middle-aged, overweight man with yellow skin, a bald head with two combover hairs, a simple white collared shirt, and blue pants",
+        "identity_tag": "the iconic cartoon character Homer Simpson",
+        "style_tag": "in the iconic Matt Groening The Simpsons style",
+        "image_url": "homer_simpson.jpg",
+    },
+    {
+        "name": "Goofy",
+        "bio": "Mickey's clumsy, kind-hearted, and perpetually cheerful best friend.",
+        "physical_description": "A very tall, lanky anthropomorphic dog with long droopy ears, a few prominent teeth, wearing a green hat, an orange turtleneck, and a black vest.",
+        "visual_dna": "A detailed drawing of a very tall, lanky anthropomorphic dog with long droopy ears, a protruding snout, two prominent teeth, wearing a green fedora-like hat, an orange turtleneck, and a black vest",
+        "identity_tag": "the iconic Disney character Goofy",
+        "style_tag": "in the classic Disney animation style",
+        "image_url": "Goofy.jpg", # Chú ý tên file viết hoa
+    },
+    {
+        "name": "Bugs Bunny",
+        "bio": "The clever, carrot-chomping, and unflappable rabbit from Looney Tunes.",
+        "physical_description": "A tall, slender, grey and white anthropomorphic rabbit with long ears, large feet, and prominent front teeth.",
+        "visual_dna": "A detailed drawing of a tall, slender, grey and white anthropomorphic rabbit with long ears, large feet, prominent front teeth, and white gloves",
+        "identity_tag": "the iconic Looney Tunes character Bugs Bunny",
+        "style_tag": "in the classic Warner Bros. Looney Tunes animation style",
+        "image_url": "bugs_bunny.jpg",
+    },
+    {
+        "name": "Tom Cat",
+        "bio": "The determined, yet perpetually unlucky, cat from the classic Tom and Jerry cartoons.",
+        "physical_description": "A blue-grey anthropomorphic cat with a long tail, sharp claws, yellow-green eyes, and white fur on his face and belly.",
+        "visual_dna": "A detailed drawing of a blue-grey anthropomorphic domestic cat with a long tail, sharp claws, expressive yellow-green eyes, and white fur around his mouth and chest",
+        "identity_tag": "the iconic cartoon character Tom the cat",
+        "style_tag": "in the classic Hanna-Barbera Tom and Jerry animation style",
+        "image_url": "tom_cat.jpg",
+    },
+    {
+        "name": "Jerry Mouse",
+        "bio": "The small, clever, and resourceful mouse who always outsmarts his feline rival, Tom.",
+        "physical_description": "A very small, brown anthropomorphic mouse with large ears, a long thin tail, and a cheerful expression.",
+        "visual_dna": "A detailed drawing of a small, clever brown anthropomorphic mouse with large semi-circular ears, a long thin tail, and a mischievous, cheerful expression",
+        "identity_tag": "the iconic cartoon character Jerry the mouse",
+        "style_tag": "in the classic Hanna-Barbera Tom and Jerry animation style",
+        "image_url": "jerry_mouse.jpg",
+    },
+    {
+        "name": "Conan Edogawa",
+        "bio": "The brilliant high school detective Shinichi Kudo, trapped in a child's body, solving mysteries while hiding his true identity.",
+        "physical_description": "A young boy with short brown hair, a prominent cowlick, large blue eyes, wearing oversized round glasses, a blue suit jacket, and a red bowtie.",
+        "visual_dna": "A detailed drawing of a young Japanese boy with short brown hair, a cowlick on the back of his head, large blue eyes, wearing oversized round glasses, a formal blue suit jacket, grey shorts, and a red voice-changing bowtie",
+        "identity_tag": "the anime character Conan Edogawa from Detective Conan",
+        "style_tag": "in the modern Japanese anime style of Detective Conan",
+        "image_url": "conan_edogawa.jpg",
+    },
+]

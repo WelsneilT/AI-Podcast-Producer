@@ -1,9 +1,0 @@
-# Môi trường ảo
-venv/
-
-# File biến môi trường
-.env
-
-# Thư mục cache của Python
-__pycache__/
-

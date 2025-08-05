@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Story Creator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* === CSS MỚI CHO LOADING VÀ LAYOUT TRUYỆN === */
+
+        /* Sửa lỗi Loading Indicator lệch */
+        #loading-indicator {
+            /* display: none; Bỏ dòng này, JS sẽ xử lý */
+            position: fixed; /* Che phủ toàn màn hình */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            /* Dùng Flexbox để căn giữa hoàn hảo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Nâng cấp layout truyện */
+        .chapter-container {
+            display: flex; /* Bật Flexbox */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            gap: 2.5rem; /* Khoảng cách giữa ảnh và chữ */
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #444;
+        }
+
+        /* Cấu hình cho ảnh và chữ */
+        .chapter-media, .chapter-text {
+            flex: 1; /* Chia đôi không gian, mỗi bên chiếm 50% */
+            min-width: 0; /* Cần thiết cho Flexbox khi nội dung quá lớn */
+        }
+        
+        .chapter-text h2 {
+            margin-top: 0;
+        }
+
+        .chapter-media video, .chapter-media img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Đảo ngược layout cho các chương chẵn (2, 4, ...) */
+        .chapter-container:nth-child(even) {
+            flex-direction: row-reverse; /* Ảnh sang phải, chữ sang trái */
+        }
+    </style>
+</head>
+<body>
+    <!-- (Sidebar không đổi) -->
+    <div class="sidebar">
+        <!-- ... (Toàn bộ code form của bạn) ... -->
+    </div>
+    
+    <div class="main-content">
+        <div id="initial-message"><h1>Your Story Will Appear Here</h1><p>Fill in the details, select your characters, and let the magic begin!</p></div>
+        
+        <!-- Loading Indicator đã được sửa CSS ở trên -->
+        <div id="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+            <h2 id="loading-message-text" style="text-align: center; color: white;">Brewing up your story...</h2>
+        </div>
+        
+        <div id="story-content" style="display: none;">
+             <!-- Nội dung sẽ được JS chèn vào đây -->
+        </div>
+    </div>
+
+    <!-- (Cầu nối dữ liệu JS không đổi) -->
+    {{ characters_preset|json_script:"characters-data" }}
+    <script>
+        window.CHARACTERS_DATA = JSON.parse(document.getElementById('characters-data').textContent);
+        window.APP_CONFIG = {
+            CREATE_URL: "{% url 'creator:create_story_view' %}",
+            STATUS_URL_BASE: "/api/task-status/"
+        };
+    </script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
